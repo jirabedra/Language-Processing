@@ -2,6 +2,26 @@
 Language processing models and algorithms based on Jurafsky and Martin Speech And Language Processing
 Sections will briefly cover some of the most relevant topics/algorithms I found on such book. They will be mainly implenented in **Python**.
 
+## Regular expressions
+
+Regular expressions (regexes or regexps) are an easy application of language processing. Most of us programmers are familiar with them (despite not being our cup of tea...). Regexes are formulas or conditions that match text or strings. There are some standards for writing regexes; in this case I will use the JavaScript standard.   
+
+The regex atom is the character or string of characters. For example hi is, in fact, a regex. hi will only match any substring within a string which contains an h followed by an i.   
+
+The range operator - matches characters within certain range. For example, a-z matches any lowercase letter.  
+
+[Screenshot]https://github.com/jirabedra/Language-Processing/edit/main/Pictures/01_sampleRegex.png?raw=true
+
+The [ and ] operators act like the logical disjunction, a.k.a boolean OR operator. It matches any of the conditions inside the brackets.  Regex disjunction can also be noted with a vertical slash |. For instance, if we were to match any character t or character i within a string, we could either define [it] or i | t. 
+
+There are a couple more operators I found to be useful when matching simple regexes. The negation operator ^ matches any string that does not contain any of its arguments. For example, ^a will match any character different to a lowercase a.  
+
+Finally, I would like to mention the Kleene operators * and + (Kleene star and plus). Kleene * matches zero or more occurences of its preceding symbol. Kleene + matches one or more. Let us look at some examples:
+
+
+
+Regexes can get tricky, and pretty nasty, when they are compound conditions. For the sake of brevity, we will not cover such examples in this guide.  
+
 ## Finite State Automata
 We will try to build three equivalent models that let us represent **Finite State Automata (FSA)**. FSAs can be used in text search. This will be the most basic use case for NLP.  
 
