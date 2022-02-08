@@ -10,15 +10,25 @@ The regex atom is the character or string of characters. For example hi is, in f
 
 The range operator - matches characters within certain range. For example, a-z matches any lowercase letter.  
 
-[Screenshot]https://github.com/jirabedra/Language-Processing/edit/main/Pictures/01_sampleRegex.png?raw=true
+The [ and ] operators act like the logical disjunction, a.k.a boolean OR operator. It matches any of the conditions inside the brackets.  Regex disjunction can also be noted with a vertical slash |. For instance, if we were to match any character t or character i within a string, we could either define [it] or i | t. Let us see this in action:
 
-The [ and ] operators act like the logical disjunction, a.k.a boolean OR operator. It matches any of the conditions inside the brackets.  Regex disjunction can also be noted with a vertical slash |. For instance, if we were to match any character t or character i within a string, we could either define [it] or i | t. 
+<p align="center">
+  <img src="https://github.com/jirabedra/Language-Processing/blob/main/Pictures/02_regexDisjunction.png?raw=true" width="85%" title="Sample regex on regexpal.com">
+</p>
 
-There are a couple more operators I found to be useful when matching simple regexes. The negation operator ^ matches any string that does not contain any of its arguments. For example, ^a will match any character different to a lowercase a.  
+There are a couple more operators I found to be useful when matching simple regexes. The negation operator ^ matches any string that does not contain any of its arguments. For example, ^a will match any character different to a lowercase a. The following regex should match any character that is not a lowercase letter.
 
-Finally, I would like to mention the Kleene operators * and + (Kleene star and plus). Kleene * matches zero or more occurences of its preceding symbol. Kleene + matches one or more. Let us look at some examples:
+<p align="center">
+  <img src="https://github.com/jirabedra/Language-Processing/blob/main/Pictures/01_sampleRegex.png?raw=true" width="85%" title="Sample regex on regexpal.com">
+</p>
 
+Finally, I would like to mention the Kleene operators * and + (Kleene star and plus). Kleene * matches zero or more occurences of its preceding symbol. Kleene + matches one or more. Let us look at an examples:
 
+<p align="center">
+  <img src="https://github.com/jirabedra/Language-Processing/blob/main/Pictures/03_kleene+.png?raw=true" width="85%" title="Sample regex on regexpal.com">
+</p>
+
+In this case, only double s are matched. Any single s will not match this regex due to the kleene + operator.  
 
 Regexes can get tricky, and pretty nasty, when they are compound conditions. For the sake of brevity, we will not cover such examples in this guide.  
 
